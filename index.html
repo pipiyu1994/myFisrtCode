@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工位风水局</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">工位风水局</h1>
+            <p class="app-slogan">工位风水藏玄机，升职加薪等着你</p>
+        </header>
+        
+        <main class="main-content">
+            <section class="input-section">
+                <h2 class="section-title">请输入您的信息</h2>
+                
+                <div class="input-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" placeholder="打工人" value="打工人">
+                </div>
+                
+                <div class="input-group">
+                    <label for="position">岗位</label>
+                    <select id="position">
+                        <option value="程序猿">程序猿</option>
+                        <option value="产品狗">产品狗</option>
+                        <option value="运营喵">运营喵</option>
+                        <option value="设计狮">设计狮</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>卜卦场景</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="scene" value="工位布局" checked>
+                            <span>工位布局</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="scene" value="摸鱼安全">
+                            <span>摸鱼安全</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="scene" value="加班概率">
+                            <span>加班概率</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="scene" value="加薪潜力">
+                            <span>加薪潜力</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="scene" value="BUG规避">
+                            <span>BUG规避</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button id="calculate-btn" class="calculate-btn">开始测算</button>
+            </section>
+            
+            <section id="result-section" class="result-section hidden">
+                <h2 class="section-title">测算结果</h2>
+                
+                <div class="result-card">
+                    <div class="fortune-rating" id="fortune-rating">
+                        上上签·工位锦鲤
+                    </div>
+                    
+                    <div class="core-message" id="core-message">
+                        【核心话术】
+                    </div>
+                    
+                    <div class="solution" id="solution">
+                        【化解建议】
+                    </div>
+                </div>
+                
+                <button id="reset-btn" class="reset-btn">重新测算</button>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 工位风水局 | 仅供娱乐，切勿当真</p>
+        </footer>
+    </div>
+    
+    <!-- 结果弹窗 -->
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>测算结果</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="fortune-rating" id="modal-fortune-rating">
+                    上上签·工位锦鲤
+                </div>
+                
+                <div class="core-message" id="modal-core-message">
+                    【核心话术】
+                </div>
+                
+                <div class="solution" id="modal-solution">
+                    【化解建议】
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="reset-btn" class="reset-btn">重新测算</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
